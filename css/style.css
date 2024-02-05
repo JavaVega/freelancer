@@ -68,3 +68,42 @@ h1,h2,h3{
     background-color: var(--primario);
     color: var(--oscuro);
 }
+.hero{
+    background-image: url(/img/hero.jpg);
+    height: 45rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.contenido-hero{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenido-hero h2{
+    color: var(--blanco);
+}
+.centrar{
+    color: var(--blanco);
+    display: flex;
+    align-items: end;
+}
+
+.button{
+    padding: 2rem 4rem;
+    background-color: var(--secundario);
+    border-radius: .7rem;
+    margin-top: 2rem;
+}
+.button a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3rem;
+    border: none;
+}
