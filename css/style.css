@@ -36,19 +36,29 @@ h1,h2,h3{
     margin: 0 auto;
 }
 
-h1 span{
+.titulo span{
     font-size: 2rem;
     font-weight: bold;
+    text-transform: uppercase;
+    color: var(--secundario);
 }
 .nav-bg{
     background-color: var(--secundario);
 }
 .nav-principal{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
+@media  (min-width: 768px){ 
+    .nav-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+ }
 .nav-principal a{
+    display: block;
     text-decoration: none;
+    text-align: center;
     padding: 1rem 2rem;
     color: var(--blanco);
     font-size: 2rem;
