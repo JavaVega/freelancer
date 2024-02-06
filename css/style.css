@@ -1,3 +1,4 @@
+/*  Nos ayuda por default tener un orden **/
 :root{
     --negro: #000000;
     --oscuro: #212121;
@@ -7,19 +8,56 @@
     --secundario: #0097A7;
     --grisClaro: #DFE9F3;
 }
+/*  Globales **/
 html{
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para Box Model **/
+    scroll-snap-type: y mandatory;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
+/** Scroll Snap**/
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
 
 body{
-    font-size: 16px;
+    font-size: 16px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
     background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
 }
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto;
+}
+/** Utilidades **/
+.w-sm-100 {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+
+/* Tipografia */
 h1{
     font-size: 3.8rem;
 }
@@ -35,16 +73,7 @@ h1,h2,h3{
 .footer p{
     text-align: center;
 }
-.contenedor{
-    max-width: 100rem;
-    margin: 0 auto;
-}
-.sombra {
-    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-    background-color: var(--blanco);
-    padding: 2rem;
-    border-radius: 1rem;
-}
+
 .titulo span{
     font-size: 2rem;
     font-weight: bold;
@@ -103,20 +132,28 @@ h1,h2,h3{
 }
 
 .button{
-    padding: 2rem 4rem;
     background-color: var(--secundario);
-    border-radius: .7rem;
-    margin-top: 2rem;
-}
-.button a{
     color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
     text-decoration: none;
-    font-weight: bold;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
     border: none;
 }
 
+@media (min-width: 768px) {
+    .button {
+        width: auto;
+    }
+}
+.button:hover {
+    cursor: pointer;
+}
 @media  (min-width: 768px){ 
     .servicios{
         display: grid;
