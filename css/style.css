@@ -117,11 +117,13 @@ h1,h2,h3{
     border: none;
 }
 
-.servicios{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-}
+@media  (min-width: 768px){ 
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }  
+ }
 .servicio{
     color: var(--secundario);
     text-align: center;
