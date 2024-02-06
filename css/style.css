@@ -147,6 +147,7 @@ h1,h2,h3{
     border: none;
 }
 
+
 @media (min-width: 768px) {
     .button {
         width: auto;
