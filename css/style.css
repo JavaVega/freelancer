@@ -18,9 +18,10 @@ html{
     box-sizing: inherit;
 }
 /** Scroll Snap**/
+.nav-bg,
 .servicios,
-.navegacion-principal,
-.formulario {
+.formulario,
+.footer {
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
